@@ -1,0 +1,19 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+venv/
+.venv/
+env/
+.env
+
+# Terraform
+.terraform/
+*.tfstate
+*.tfstate.backup
+
+# AWS / Lambda
+assistant.zip
+
+# OS
+.DS_Store
