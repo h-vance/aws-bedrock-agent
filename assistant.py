@@ -10,7 +10,7 @@ logger.setLevel(os.getenv("LOG_LEVEL", "INFO"))
 
 # Clients
 bedrock = boto3.client("bedrock-runtime")
-MODEL_ID = os.getenv("BEDROCK_MODEL_ID", "anthropic.claude-3-haiku-20240307-v1:0")
+MODEL_ID = os.getenv("BEDROCK_MODEL_ID", "anthropic.claude-3-5-sonnet-20241022-v2:0")
 
 # --- SRE Tool Definitions ---
 

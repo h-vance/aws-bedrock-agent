@@ -19,7 +19,7 @@ variable "environment" {
 variable "bedrock_model_id" {
   description = "The Bedrock model ID to use."
   type        = string
-  default     = "anthropic.claude-3-haiku-20240307-v1:0"
+  default     = "anthropic.claude-3-5-sonnet-20241022-v2:0"
 }
 
 variable "log_retention_days" {

@@ -10,7 +10,7 @@ sequenceDiagram
     participant CW as CloudWatch Alarm
     participant EB as EventBridge
     participant L as Bedrock Orchestrator (Lambda)
-    participant B as Amazon Bedrock (Claude 3)
+    participant B as Amazon Bedrock (Claude 3.5 Sonnet)
     participant AWS as AWS Infrastructure
 
     CW->>EB: State Change (ALARM)
@@ -29,12 +29,12 @@ sequenceDiagram
 
 ## 🚀 Key Features
 *   **Event-Driven Workflow**: Triggered automatically by CloudWatch Alarms via EventBridge.
-*   **Autonomous Remediation**: Uses Anthropic Claude 3 Haiku to decide between investigation (`get_service_logs`) or action (`restart_service`, `scale_up`).
+*   **Autonomous Remediation**: Uses Anthropic Claude 3.5 Sonnet to decide between investigation (`get_service_logs`) or action (`restart_service`, `scale_up`).
 *   **SRE-First Design**: Implements structured JSON logging, strict IAM least-privilege boundaries, and log retention policies.
 *   **Infrastructure as Code**: Fully managed via Terraform with modular variables and security hardening.
 
 ## 🛠️ Tech Stack
-*   **AI Engine**: Amazon Bedrock (Anthropic Claude 3 Haiku)
+*   **AI Engine**: Amazon Bedrock (Anthropic Claude 3.5 Sonnet)
 *   **Compute**: AWS Lambda (Python 3.12)
 *   **Infrastructure**: Terraform
 *   **Observability**: CloudWatch Logs & EventBridge
