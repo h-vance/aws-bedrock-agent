@@ -56,9 +56,9 @@ resource "aws_iam_role_policy" "logging_policy" {
   })
 }
 
-# Remediation Actions (Placeholders to demonstrate SRE capability)
+# Remediation Actions (Placeholders to demonstrate reliability capability)
 resource "aws_iam_role_policy" "remediation_policy" {
-  name = "SRE-Remediation-Actions"
+  name = "Reliability-Remediation-Actions"
   role = aws_iam_role.lambda_role.id
 
   policy = jsonencode({

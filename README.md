@@ -1,5 +1,5 @@
 # AWS Bedrock Ops Agent
-**Autonomous SRE Orchestrator for Self-Healing Infrastructure**
+**Autonomous Production Reliability Orchestrator for Self-Healing Infrastructure**
 
 This repository contains a production-grade AI agent designed to automate cloud infrastructure remediation. Unlike standard "chatbots," this agent is event-driven and capable of autonomous tool-calling to triage and fix operational incidents.
 
@@ -30,7 +30,7 @@ sequenceDiagram
 ## 🚀 Key Features
 *   **Event-Driven Workflow**: Triggered automatically by CloudWatch Alarms via EventBridge.
 *   **Autonomous Remediation**: Uses Anthropic Claude 3.5 Sonnet to decide between investigation (`get_service_logs`) or action (`restart_service`, `scale_up`).
-*   **SRE-First Design**: Implements structured JSON logging, strict IAM least-privilege boundaries, and log retention policies.
+*   **Production Reliability-First Design**: Implements structured JSON logging, strict IAM least-privilege boundaries, and log retention policies.
 *   **Infrastructure as Code**: Fully managed via Terraform with modular variables and security hardening.
 
 ## 🛠️ Tech Stack

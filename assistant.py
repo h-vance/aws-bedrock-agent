@@ -12,7 +12,7 @@ logger.setLevel(os.getenv("LOG_LEVEL", "INFO"))
 bedrock = boto3.client("bedrock-runtime")
 MODEL_ID = os.getenv("BEDROCK_MODEL_ID", "anthropic.claude-3-5-sonnet-20241022-v2:0")
 
-# --- SRE Tool Definitions ---
+# --- Reliability Tool Definitions ---
 
 def get_service_logs(service_name: str, lines: int = 50):
     """Simulates fetching logs for a specific service."""
@@ -91,7 +91,7 @@ def execute_tool(name, args):
     return "Unknown tool."
 
 def run_agent_loop(event_context):
-    system_prompt = """You are an Elite SRE Bedrock Ops Agent. 
+    system_prompt = """You are an Elite Production Reliability Ops Agent. 
     You receive CloudWatch Alarms and must triage and remediate them using the provided tools.
     1. Analyze the alarm details.
     2. Use 'get_service_logs' to investigate if needed.
